@@ -26,8 +26,10 @@ def main():
     clusters_count = int(argv[2])
     output_name = argv[3]
     if vectors:
+        print('Calculating...')
         clusters = kmeans(vectors, clusters_count=clusters_count)
         if len(vectors[0]) == 2:
+            print('Drawing...')
             display_result(vectors, clusters)
         write_result(vectors, clusters, output_name)
     else:
